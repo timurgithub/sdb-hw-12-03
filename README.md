@@ -42,9 +42,9 @@ LIMIT 5;
 
 ```sql
 SELECT 
-  LOWER(REPLACE(LOWER(c.first_name), 'll', 'pp')), 
-  c.active
-FROM sakila.customer c
-WHERE (LOWER(c.first_name) = 'Kelly' OR LOWER(c.first_name) = 'Willie')
-  AND c.active = 1;
+  REPLACE(LOWER(first_name), 'll', 'pp'), 
+  active
+FROM sakila.customer
+WHERE (first_name = 'Kelly' OR first_name = 'Willie') 
+  AND active = 1;
 ```
